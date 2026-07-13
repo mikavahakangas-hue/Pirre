@@ -1,12 +1,13 @@
 {
-  "version": "4.35.0",
-  "package_url": "https://raw.githubusercontent.com/mikavahakangas-hue/Pirre/main/releases/nspire_ui_v4_35_0_package.tar.gz",
-  "sha256": "1ba3ebd9afac4102e01afa4c25241586f54ea66070051de51c22c03d6b7b06d7",
-  "size_bytes": 4071547,
+  "version": "4.36.0",
+  "package_url": "https://raw.githubusercontent.com/mikavahakangas-hue/Pirre/main/releases/nspire_ui_v4_36_0_ota_patch.tar.gz",
+  "sha256": "9018e2e48d15ff3e79c740723c518039a7c4c92f3a87dd1e9ee92267dde903bc",
+  "size_bytes": 5533,
   "notes": [
-    "AI-keskus: Gemini Nopea, Gemini Tarkka, Groq, GPT ja AUTO",
-    "AI-historia ja projektikohtainen tietopankki",
-    "Settings-valikkoon näppäimistön koko-, väri- ja asetteluasetukset",
-    "SHA-256-tarkistettu pilvipäivityspohja ja automaattinen palautus"
+    "Päivitykset-välilehden yläosassa näkyy suuri AJANTASALLA-, PÄIVITYS SAATAVILLA- tai VIRHE-ilmoitus",
+    "Päivitysmanifestin osoite näkyy kokonaan omassa monirivisessä laatikossaan",
+    "Pirren julkinen päivityskanava on oletuksena valmiina",
+    "Päivitykset tarkistetaan automaattisesti näkymää avattaessa",
+    "Manifestiosoitteen tallennus käynnistää välittömän tarkistuksen"
   ]
 }
