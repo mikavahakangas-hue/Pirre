@@ -1,11 +1,13 @@
 {
-  "version": "4.38.2",
-  "package_url": "https://raw.githubusercontent.com/mikavahakangas-hue/Pirre/5a2dfa01edb5714f1ef83285239456848a09c8bf/releases/nspire_ui_v4_38_2_ota_patch.tar.gz",
-  "sha256": "f7caa88736e6ee972ae865fb7ecfc65a7d9908f271024e597b3784a99bcd3690",
-  "size_bytes": 5880,
+  "version": "4.39.1",
+  "package_url": "https://raw.githubusercontent.com/mikavahakangas-hue/Pirre/b337178d90d8f50b0b770a71d1ad8196fe231c86/releases/nspire_ui_v4_39_1_ota_patch.tar.gz",
+  "sha256": "b143f1b55c842e00d6a9021c5491cf2b420acf004b1442391fa57ad8e2f01089",
+  "size_bytes": 9122,
   "notes": [
-    "V4.39.0 on vedetty pois käytöstä käynnistyksen jälkeisen valkoisen näytön vuoksi",
-    "Päivityskanavan turvallinen versio on jälleen V4.38.2",
-    "Älä asenna V4.39.0-pakettia"
+    "Yksi LATAA JA PÄIVITÄ -painike jatkaa latauksesta automaattisesti asennukseen vasta paketin valmistuttua",
+    "Näytönsäästäjä estetään latauksen, tarkistuksen ja asennuksen aikana",
+    "Päivitys testaa oikean kiosk-cog.service-palvelun ja Cog/WPE-käyttöliittymän käynnistymisen laitteessa",
+    "Jos Cog ei piirrä toimivaa käyttöliittymää, asennus palauttaa automaattisesti V4.38.2-varmuuskopion",
+    "Näytön tai VNC-näkymän rotaatioasetuksiin ei tehdä muutoksia"
   ]
 }
