@@ -1,13 +1,11 @@
 {
-  "version": "4.38.0",
-  "package_url": "https://raw.githubusercontent.com/mikavahakangas-hue/Pirre/43f8982271b2e0370b6980a33302a2f53d0543a9/releases/nspire_ui_v4_38_0_ota_patch.tar.gz",
-  "sha256": "5763aee511769af6940c60e25dba5b73a5aad0e8b2b52c8a435407c1e6400a68",
-  "size_bytes": 33292,
+  "version": "4.37.1",
+  "package_url": "https://raw.githubusercontent.com/mikavahakangas-hue/Pirre/main/releases/nspire_ui_v4_37_1_ota_patch.tar.gz",
+  "sha256": "02fcc8bf73169bdf8fe3ca6757a95c6cef8381c36f7dc4fd69041d940229fc5c",
+  "size_bytes": 4414,
   "notes": [
-    "Yhteinen pyörivä maapallo näyttää AI:n, kameran, sään, kalenterin, sähkön ja huollon taustatoiminnot",
-    "Settings → Järjestelmä näyttää CPU:n, RAMin, levytilan, käyttöajan, API:n ja watchdogin tilan",
-    "OTA tarkistaa akun, laturin, levytilan ja käynnissä olevat raskaat toiminnot ennen asennusta",
-    "Päivitystapahtumien loki sekä kahden minuutin automaattinen watchdog",
-    "VARMISTA KAIKKI tallentaa asetukset, AI-historian, projektit ja NspireAI-tietopankin"
+    "V4.38.0-julkaisu on tilapäisesti vedetty pois virheellisen ulkoisen tarkistussumman vuoksi",
+    "Nykyinen toimiva versio on V4.37.1",
+    "Laite ei asenna tiedostoa, jonka SHA-256 ei täsmää"
   ]
 }
