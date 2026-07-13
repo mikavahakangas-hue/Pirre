@@ -1,13 +1,13 @@
 {
   "version": "4.38.0",
-  "package_url": "https://raw.githubusercontent.com/mikavahakangas-hue/Pirre/1f0a9f4cf3000bbc6dec36fb5d7ca2295163d1c2/nspire_ui_v4_38_0_ota_bootstrap.tar.gz",
-  "sha256": "7c9abc828f96d0212fd32bd3bf56d1a76d14aa4c36b5f3621b2312fb69a6932c",
-  "size_bytes": 903,
+  "package_url": "https://raw.githubusercontent.com/mikavahakangas-hue/Pirre/43f8982271b2e0370b6980a33302a2f53d0543a9/releases/nspire_ui_v4_38_0_ota_patch.tar.gz",
+  "sha256": "5763aee511769af6940c60e25dba5b73a5aad0e8b2b52c8a435407c1e6400a68",
+  "size_bytes": 33292,
   "notes": [
     "Yhteinen pyörivä maapallo näyttää AI:n, kameran, sään, kalenterin, sähkön ja huollon taustatoiminnot",
     "Settings → Järjestelmä näyttää CPU:n, RAMin, levytilan, käyttöajan, API:n ja watchdogin tilan",
-    "OTA-asennus tarkistaa akun, laturin, levytilan ja käynnissä olevat raskaat toiminnot ennen asennusta",
+    "OTA tarkistaa akun, laturin, levytilan ja käynnissä olevat raskaat toiminnot ennen asennusta",
     "Päivitystapahtumien loki sekä kahden minuutin automaattinen watchdog",
-    "VARMISTA KAIKKI tallentaa asetukset, AI-projektit, historian ja NspireAI-tietopankin"
+    "VARMISTA KAIKKI tallentaa asetukset, AI-historian, projektit ja NspireAI-tietopankin"
   ]
 }
