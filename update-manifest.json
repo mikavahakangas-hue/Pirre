@@ -1,11 +1,13 @@
 {
-  "version": "4.37.1",
-  "package_url": "https://raw.githubusercontent.com/mikavahakangas-hue/Pirre/main/releases/nspire_ui_v4_37_1_ota_patch.tar.gz",
-  "sha256": "02fcc8bf73169bdf8fe3ca6757a95c6cef8381c36f7dc4fd69041d940229fc5c",
-  "size_bytes": 4414,
+  "version": "4.38.0",
+  "package_url": "https://raw.githubusercontent.com/mikavahakangas-hue/Pirre/d47686764e88324a5328e22ca5ce4211b151b2fc/releases/nspire_ui_v4_38_0_bootstrap_fixed.tar.gz",
+  "sha256": "f5632f6b5699115e759bd438ffc5f18ef4917567a7dd854d34728b846e4ddfe9",
+  "size_bytes": 1331,
   "notes": [
-    "V4.38.0-julkaisu on tilapäisesti vedetty pois virheellisen ulkoisen tarkistussumman vuoksi",
-    "Nykyinen toimiva versio on V4.37.1",
-    "Laite ei asenna tiedostoa, jonka SHA-256 ei täsmää"
+    "Yhteinen pyörivä maapallo näyttää AI:n, sään, kalenterin, kameran, tietopankin ja päivitysten toiminnan",
+    "Päivitysten tarkistus, lataus ja asennus ovat heti sivun yläosassa ja asennuksen vaiheet säilyvät uudelleenkäynnistyksen yli",
+    "Päivitys estetään turvallisesti, jos akku, tallennustila tai laitteen tila ei riitä",
+    "Järjestelmä-sivu näyttää lämpötilan, kuorman, RAM-muistin, tallennustilan, akun, verkon ja palveluiden tilan",
+    "Mukana ovat resurssien vapautus, täysi varmuuskopio, automaattinen palvelujen palautuminen ja näppäimistön oletusten palautus"
   ]
 }
