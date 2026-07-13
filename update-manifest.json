@@ -1,12 +1,13 @@
 {
-  "version": "4.38.2",
-  "package_url": "https://raw.githubusercontent.com/mikavahakangas-hue/Pirre/5a2dfa01edb5714f1ef83285239456848a09c8bf/releases/nspire_ui_v4_38_2_ota_patch.tar.gz",
-  "sha256": "f7caa88736e6ee972ae865fb7ecfc65a7d9908f271024e597b3784a99bcd3690",
-  "size_bytes": 5880,
+  "version": "4.39.0",
+  "package_url": "https://raw.githubusercontent.com/mikavahakangas-hue/Pirre/62aafcbe57126dbf5bf91fa5ab0c0180a1995a34/releases/nspire_ui_v4_39_0_ota_patch.tar.gz",
+  "sha256": "2642b5a87824bf70e8ae8d809f5ca7560427c3bffde2df0db27dba69aa90e624",
+  "size_bytes": 8219,
   "notes": [
-    "Korjaa tilanteen, jossa pilvikanava tarjosi V4.38.0:aa laitteessa jo olevan V4.38.1:n päälle",
-    "Päivitysnäkymässä näkyy asennuksen jälkeen V4.38.2 · PÄIVITYSKANAVA OK",
-    "V4.38.1:n Reliability-toiminnot säilyvät muuttumattomina",
-    "Pieni OTA-paketti päivittää versionumeron, muutoslokin ja näkyvän päivityskanavan tunnisteen"
+    "Päivitysnäkymässä on yksi LATAA JA PÄIVITÄ -painike, joka jatkaa latauksesta automaattisesti asennukseen",
+    "Näytönsäästäjä estetään latauksen, tarkistuksen ja asennuksen ajaksi",
+    "Piirron kosketuskoordinaatit, viivan piirto ja tyhjennys on vakautettu myös 180 asteen näytöllä",
+    "Asetusnäkymien vieritys ja piilossa olevien videonäkymien resurssien vapautus on korjattu",
+    "Sohva-näytönsäästäjän ulkoasu säilyy ennallaan ja uudistetaan erikseen"
   ]
 }
