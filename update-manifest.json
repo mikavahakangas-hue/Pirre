@@ -1,13 +1,12 @@
 {
-  "version": "4.38.0",
-  "package_url": "https://raw.githubusercontent.com/mikavahakangas-hue/Pirre/d47686764e88324a5328e22ca5ce4211b151b2fc/releases/nspire_ui_v4_38_0_bootstrap_fixed.tar.gz",
-  "sha256": "f5632f6b5699115e759bd438ffc5f18ef4917567a7dd854d34728b846e4ddfe9",
-  "size_bytes": 1331,
+  "version": "4.38.2",
+  "package_url": "https://raw.githubusercontent.com/mikavahakangas-hue/Pirre/5a2dfa01edb5714f1ef83285239456848a09c8bf/releases/nspire_ui_v4_38_2_ota_patch.tar.gz",
+  "sha256": "f7caa88736e6ee972ae865fb7ecfc65a7d9908f271024e597b3784a99bcd3690",
+  "size_bytes": 5880,
   "notes": [
-    "Yhteinen pyörivä maapallo näyttää AI:n, sään, kalenterin, kameran, tietopankin ja päivitysten toiminnan",
-    "Päivitysten tarkistus, lataus ja asennus ovat heti sivun yläosassa ja asennuksen vaiheet säilyvät uudelleenkäynnistyksen yli",
-    "Päivitys estetään turvallisesti, jos akku, tallennustila tai laitteen tila ei riitä",
-    "Järjestelmä-sivu näyttää lämpötilan, kuorman, RAM-muistin, tallennustilan, akun, verkon ja palveluiden tilan",
-    "Mukana ovat resurssien vapautus, täysi varmuuskopio, automaattinen palvelujen palautuminen ja näppäimistön oletusten palautus"
+    "Korjaa tilanteen, jossa pilvikanava tarjosi V4.38.0:aa laitteessa jo olevan V4.38.1:n päälle",
+    "Päivitysnäkymässä näkyy asennuksen jälkeen V4.38.2 · PÄIVITYSKANAVA OK",
+    "V4.38.1:n Reliability-toiminnot säilyvät muuttumattomina",
+    "Pieni OTA-paketti päivittää versionumeron, muutoslokin ja näkyvän päivityskanavan tunnisteen"
   ]
 }
