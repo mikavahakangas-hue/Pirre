@@ -1,13 +1,11 @@
 {
-  "version": "4.42.1",
-  "package_url": "https://raw.githubusercontent.com/mikavahakangas-hue/Pirre/696bd765147d560ba626eabbc1f8746a55b1acef/releases/nspire_ui_v4_42_1_ota_patch.tar.gz",
-  "sha256": "9c09ad6bd4949b9e63a981b25958719ea410dc0bedb5244e43ec6df6e4417ff8",
-  "size_bytes": 6812,
+  "version": "4.41.1",
+  "package_url": "https://raw.githubusercontent.com/mikavahakangas-hue/Pirre/65320c4ffbe9815e7b1b28f2e63987aae94d97c6/releases/nspire_ui_v4_41_1_ota_patch.tar.gz",
+  "sha256": "9cd1f11723952e5c1ddfdc706c3bc73c29512e246f255a206161b74bc40aae89",
+  "size_bytes": 3804,
   "notes": [
-    "Korjattu V4.42.0-julkaisun virheellinen GitHub-binääri ja SHA-256-ristiriita",
-    "Yhdeksän tummaa ja yhdeksän vaaleaa erillistä teemaa",
-    "Uudistettu etusivu ja sovelluskuvakkeet",
-    "Asennus vaatii toimivan V4.41.1-pohjan ja tekee varmuuskopion ennen muutoksia",
-    "Ei muutoksia Cogiin, näyttöön, kosketukseen tai rotaatioihin"
+    "V4.42.1 on vedetty pois käytöstä asennusskriptin versionumerovirheen vuoksi",
+    "Turvallinen päivityskanavan versio on V4.41.1",
+    "Älä yritä asentaa V4.42.1-pakettia uudelleen"
   ]
 }
