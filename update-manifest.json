@@ -1,14 +1,14 @@
 {
-  "version": "4.42.4",
-  "package_url": "https://raw.githubusercontent.com/mikavahakangas-hue/Pirre/5d1f02bfc0e4b8c0b11e6e4a1fc021b865fc77a8/releases/nspire_ui_v4_42_4_ota_patch.tar.gz",
-  "sha256": "4da69c36a92680205f46d77bd75cf8c820cdbf6d467668254125e5867af4d4bc",
-  "size_bytes": 4844,
+  "version": "4.42.5",
+  "package_url": "https://raw.githubusercontent.com/mikavahakangas-hue/Pirre/f7e0f8fffa05c8d5d674df01172e95368d20a5d6/releases/nspire_ui_v4_42_5_ota_patch.tar.gz",
+  "sha256": "9ddafee7b7ce4678e3dad535d0a4d1213c64ad3d5864438c687442ada5d6d38a",
+  "size_bytes": 4531,
   "notes": [
-    "Vaaleiden teemojen pinta- ja reunakontrastit vahvistettu",
-    "Aktiivinen, valittu, painettu ja pois käytöstä -tilat eroteltu selkeämmin",
-    "Etusivun korttien typografia ja kuvakkeiden materiaalit yhtenäistetty",
-    "Display- ja Updates-sivujen kortit sekä toimintopainikkeet linjattu",
-    "SOHVA dark/light -näkymien päivämäärä, lämpötilat, kosteus ja akku tasapainotettu",
+    "Etusivun todelliset app-tile- ja SVG-komponenttisäännöt uudistettu",
+    "Teemaesikatselut näyttävät jälleen aidot kolmen värin paletit",
+    "Display- ja Updates-sivut kohdistettu oikeisiin setting-row-, ota-hero-, ota-card-, ota-quick- ja update-manifest-card-luokkiin",
+    "SOHVA-päivämäärä kohdistettu oikeaan sofa-clock span -elementtiin",
+    "V4.42.4:n tehoton yleinen loppukorjauslohko poistettu",
     "Ei muutoksia näyttörotaatioon, kosketukseen, Cog/Cageen, VNC:n orientaatioon, kursoriin tai koordinaatteihin"
   ]
 }
