@@ -1,14 +1,13 @@
 {
-  "version": "4.42.5",
-  "package_url": "https://raw.githubusercontent.com/mikavahakangas-hue/Pirre/f7e0f8fffa05c8d5d674df01172e95368d20a5d6/releases/nspire_ui_v4_42_5_ota_patch.tar.gz",
-  "sha256": "9ddafee7b7ce4678e3dad535d0a4d1213c64ad3d5864438c687442ada5d6d38a",
-  "size_bytes": 4531,
+  "version": "4.42.6",
+  "package_url": "https://raw.githubusercontent.com/mikavahakangas-hue/Pirre/0a187cbcd68dcde854146fb7fb03c23ad168bcb6/releases/nspire_ui_v4_42_6_ota_patch.tar.gz",
+  "sha256": "c2c7e1156e817ed90ce1b6821a2868ee1969ade4b62a0510046248cdeb59a661",
+  "size_bytes": 3648,
   "notes": [
-    "Etusivun todelliset app-tile- ja SVG-komponenttisäännöt uudistettu",
-    "Teemaesikatselut näyttävät jälleen aidot kolmen värin paletit",
-    "Display- ja Updates-sivut kohdistettu oikeisiin setting-row-, ota-hero-, ota-card-, ota-quick- ja update-manifest-card-luokkiin",
-    "SOHVA-päivämäärä kohdistettu oikeaan sofa-clock span -elementtiin",
-    "V4.42.4:n tehoton yleinen loppukorjauslohko poistettu",
-    "Ei muutoksia näyttörotaatioon, kosketukseen, Cog/Cageen, VNC:n orientaatioon, kursoriin tai koordinaatteihin"
+    "Passiivisten etusivukorttien korostusalaviivat poistettu",
+    "Korostusviiva näkyy vain painetussa tai näppäimistöllä kohdistetussa kortissa",
+    "Vaaleiden teemojen otsikko- ja sivutekstien kontrastia vahvistettu",
+    "Teemasivun aktiivinen valinta erotettu selkeämmällä kehyksellä ja valintamerkillä",
+    "Ei rakenne-, OTA-, näyttörotaatio-, kosketus-, Cog/Cage-, VNC-, kursori- tai koordinaattimuutoksia"
   ]
 }
