@@ -1,14 +1,14 @@
 {
-  "version": "4.42.3",
-  "package_url": "https://raw.githubusercontent.com/mikavahakangas-hue/Pirre/8d6bf27ca9213055529a081d7f7fae05a650968f/releases/nspire_ui_v4_42_3_ota_patch.tar.gz",
-  "sha256": "73a39af14b24767b3f68b5581c83b4f50e234018b14c60c1c634acc432a54667",
-  "size_bytes": 7217,
+  "version": "4.42.4",
+  "package_url": "https://raw.githubusercontent.com/mikavahakangas-hue/Pirre/5d1f02bfc0e4b8c0b11e6e4a1fc021b865fc77a8/releases/nspire_ui_v4_42_4_ota_patch.tar.gz",
+  "sha256": "4da69c36a92680205f46d77bd75cf8c820cdbf6d467668254125e5867af4d4bc",
+  "size_bytes": 4844,
   "notes": [
-    "Yhdeksän tummaa ja yhdeksän vaaleaa teemaa viimeistelty kokonaisiksi värijärjestelmiksi",
-    "Jokaisella teemalla on omat tausta-, pinta-, teksti-, reuna-, korostus- ja statusvärinsä",
-    "Tummien ja vaaleiden teemojen keskinäistä erottuvuutta on parannettu",
-    "SOHVA-näkymän päivämäärä, lämpötilakorttien typografia ja alarivi on tasapainotettu",
-    "Etusivun rakenne ja toimiva OTA-ketju säilyvät ennallaan",
-    "Ei muutoksia Cogiin, näyttöön, kosketukseen tai rotaatioihin"
+    "Vaaleiden teemojen pinta- ja reunakontrastit vahvistettu",
+    "Aktiivinen, valittu, painettu ja pois käytöstä -tilat eroteltu selkeämmin",
+    "Etusivun korttien typografia ja kuvakkeiden materiaalit yhtenäistetty",
+    "Display- ja Updates-sivujen kortit sekä toimintopainikkeet linjattu",
+    "SOHVA dark/light -näkymien päivämäärä, lämpötilat, kosteus ja akku tasapainotettu",
+    "Ei muutoksia näyttörotaatioon, kosketukseen, Cog/Cageen, VNC:n orientaatioon, kursoriin tai koordinaatteihin"
   ]
 }
