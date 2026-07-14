@@ -1,13 +1,14 @@
 {
-  "version": "4.42.2",
-  "package_url": "https://raw.githubusercontent.com/mikavahakangas-hue/Pirre/4db4f02a1cbc1ef317776b78bb7d968648d895b1/releases/nspire_ui_v4_42_2_ota_patch.tar.gz",
-  "sha256": "b637aed00c46fb33ddc1fc39ddc52ce38d31b357998bcfeac66a7d1457b186c9",
-  "size_bytes": 7662,
+  "version": "4.42.3",
+  "package_url": "https://raw.githubusercontent.com/mikavahakangas-hue/Pirre/8d6bf27ca9213055529a081d7f7fae05a650968f/releases/nspire_ui_v4_42_3_ota_patch.tar.gz",
+  "sha256": "73a39af14b24767b3f68b5581c83b4f50e234018b14c60c1c634acc432a54667",
+  "size_bytes": 7217,
   "notes": [
-    "Korjaa V4.42.1-paketin väärän 4.42.0-lopputarkistuksen",
-    "Versionumero luetaan yhdestä VERSION-tiedostosta patchiin ja health-tarkistukseen",
-    "Onnistunut asennus ja rollback palauttavat molemmat päivitystilat idle-tilaan",
-    "Mukana yhdeksän tummaa ja yhdeksän vaaleaa teemaa sekä uudistettu etusivu",
+    "Yhdeksän tummaa ja yhdeksän vaaleaa teemaa viimeistelty kokonaisiksi värijärjestelmiksi",
+    "Jokaisella teemalla on omat tausta-, pinta-, teksti-, reuna-, korostus- ja statusvärinsä",
+    "Tummien ja vaaleiden teemojen keskinäistä erottuvuutta on parannettu",
+    "SOHVA-näkymän päivämäärä, lämpötilakorttien typografia ja alarivi on tasapainotettu",
+    "Etusivun rakenne ja toimiva OTA-ketju säilyvät ennallaan",
     "Ei muutoksia Cogiin, näyttöön, kosketukseen tai rotaatioihin"
   ]
 }
