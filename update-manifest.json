@@ -1,14 +1,13 @@
 {
-  "version": "4.41.0",
-  "package_url": "https://raw.githubusercontent.com/mikavahakangas-hue/Pirre/a67e7a7d10603f717a2fad98236ea6af2af8578f/releases/nspire_ui_v4_41_0_ota_patch.tar.gz",
-  "sha256": "9797ace317e1741c335c30aebb583942c0974b23723117f7de315ca9f914344e",
-  "size_bytes": 7585,
+  "version": "4.41.1",
+  "package_url": "https://raw.githubusercontent.com/mikavahakangas-hue/Pirre/65320c4ffbe9815e7b1b28f2e63987aae94d97c6/releases/nspire_ui_v4_41_1_ota_patch.tar.gz",
+  "sha256": "9cd1f11723952e5c1ddfdc706c3bc73c29512e246f255a206161b74bc40aae89",
+  "size_bytes": 3804,
   "notes": [
-    "Uusi Windows-henkinen värikarttajärjestelmä: neutraalit pinnat ja tekstit sekä erilliset korostus-, info-, onnistumis-, varoitus- ja virhevärit",
-    "Neljä tummaa teemaa: Windows Dark Blue, Graphite, Forest ja Warm Dark",
-    "Neljä oikeasti vaaleaa teemaa: Windows Light, Warm Light, Cool Light ja High Contrast Light",
-    "SOHVA 2.1 käyttää semanttisia lämpötila-, kosteus- ja akkuvärejä sekä säilyttää 64 px lämpötilat ja kellon fonttipainon 520",
-    "Asennus vaatii toimivan V4.40.1-pohjan, tekee varmuuskopion ja palauttaa sen automaattisesti virhetilanteessa",
-    "Cog-, näyttö-, kosketus- ja VNC-rotaatioihin ei tehdä muutoksia"
+    "Tavalliset pinnat ja reunat muutettu neutraaleiksi",
+    "Teemaväri näkyy vain aktiivisissa valinnoissa ja tärkeissä toiminnoissa",
+    "Vihreä, keltainen ja punainen on rajattu tila- ja virheilmoituksiin",
+    "Teemavalinnan esikatselut ja vaaleiden teemojen kontrasti on rauhoitettu",
+    "Ei muutoksia Cogiin, näyttöön, kosketukseen tai rotaatioihin"
   ]
 }
