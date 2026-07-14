@@ -1,14 +1,11 @@
 {
-  "version": "4.42.0",
-  "package_url": "https://raw.githubusercontent.com/mikavahakangas-hue/Pirre/c06b074ca94c70c281c00ca1c70caf15b4b4b970/releases/nspire_ui_v4_42_0_ota_patch.tar.gz",
-  "sha256": "85501eb131e5f11c11f27dc3d84c27cc6d5357b048ceffd23c0caece70445106",
-  "size_bytes": 6880,
+  "version": "4.41.1",
+  "package_url": "https://raw.githubusercontent.com/mikavahakangas-hue/Pirre/65320c4ffbe9815e7b1b28f2e63987aae94d97c6/releases/nspire_ui_v4_41_1_ota_patch.tar.gz",
+  "sha256": "9cd1f11723952e5c1ddfdc706c3bc73c29512e246f255a206161b74bc40aae89",
+  "size_bytes": 3804,
   "notes": [
-    "Yhdeksän tummaa ja yhdeksän vaaleaa täysin erillistä teemakokonaisuutta",
-    "Jokaisella teemalla on omat tausta-, pinta-, teksti-, reuna- ja korostusvärinsä",
-    "Etusivu on rakennettu uudelleen Windows-henkisillä kuvakekorteilla ja selkeämmällä 640 × 480 -asettelulla",
-    "Sovelluskuvakkeiden tunnistevärit ja statusvärit on erotettu teemaväristä",
-    "Asennus tekee varmuuskopion ja palauttaa V4.41.1:n automaattisesti virhetilanteessa",
-    "Ei muutoksia Cogiin, näyttöön, kosketukseen tai rotaatioihin"
+    "V4.42.0 on vedetty pois käytöstä asennusvirheen vuoksi",
+    "Turvallinen päivityskanavan versio on V4.41.1",
+    "Älä yritä asentaa V4.42.0-pakettia uudelleen"
   ]
 }
