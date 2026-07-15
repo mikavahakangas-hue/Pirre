@@ -1,12 +1,12 @@
 {
-  "version": "6.0.4",
-  "package_url": "https://raw.githubusercontent.com/mikavahakangas-hue/Pirre/0c139c800404baafe8fca1eb6052eea5ba702122/releases/nspire_v6_0_4_ota_verification.tar.gz",
-  "sha256": "68afcb1c64a385cff6bbf821dd16a2b970f458e939da1270bb2c3495a01ece60",
-  "size_bytes": 3154,
+  "version": "6.0.5",
+  "package_url": "https://raw.githubusercontent.com/mikavahakangas-hue/Pirre/f50cfff077580c4102c584c9277a6197fc4d0896/releases/nspire_v6_0_5_ota_verification.tar.gz",
+  "sha256": "d9f6b5661c1226ee2f8beff591eb33ca045caf8efa3618fa9c29824b708ae35d",
+  "size_bytes": 3210,
   "notes": [
+    "Korjaa OTA-testin versionumeroinnin: V6.0.4-laitteelle tarjotaan aidosti uudempi V6.0.5",
     "Suora OTA-päivitysketju varmennetaan Päivitykset → Lataa ja asenna -toiminnolla",
-    "V6.0.3:n näytönsäästäjä ja VNC-kevennys säilyvät muuttumattomina",
-    "Päivitys tekee varmuuskopion ja palauttaa V6.0.3:n automaattisesti virheessä",
-    "Ei muutoksia näyttöön, kosketukseen, Cog/Cageen, WayVNC:hen tai verkkoon"
+    "Käyttöliittymä, näytönsäästäjä, VNC, näyttö, kosketus ja verkko säilyvät muuttumattomina",
+    "Päivitys tekee varmuuskopion ja palauttaa V6.0.4:n automaattisesti virheessä"
   ]
 }
