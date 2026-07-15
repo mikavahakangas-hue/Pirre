@@ -1,12 +1,12 @@
 {
-  "version": "6.0.6",
-  "package_url": "https://raw.githubusercontent.com/mikavahakangas-hue/Pirre/dc50e3150b8465cbefbbee1a7f6e4b948edba0b1/releases/nspire_v6_0_6_ota_fix.tar.gz",
-  "sha256": "63e34e4481a04345641d66a78368d6d0778a202a1ddfbedbd47e03707548b74f",
-  "size_bytes": 3294,
+  "version": "6.0.7",
+  "package_url": "https://raw.githubusercontent.com/mikavahakangas-hue/Pirre/ca5cf89c434b628009a0e4945ebcddf47f4bcfd5/releases/nspire_v6_0_7_desktop_recovery.tar.gz",
+  "sha256": "26741ca5ce770596362039e075bf5f30ca4428656692df2bcba4cd47af487958",
+  "size_bytes": 4619,
   "notes": [
-    "Korjaa V6.0.5-asennuksen liian tiukat tarkistukset",
-    "Päivittää vain olemassa olevan runtime-tiedoston versionumeron eikä korvaa koko tiedostoa",
-    "Hyväksyy lähtöversioksi palautuneen V6.0.4:n sekä mahdollisen V6.0.5:n",
-    "Tarkistaa OTA-version JSON-jäsennyksellä ja säilyttää automaattisen palautuksen"
+    "Korjaa mustan työpöytänäkymän nollaamalla Cog/WPE WebKitin välimuistin ja tallennetun sivustotilan",
+    "Ei korvaa käyttöliittymän HTML-, CSS- tai JavaScript-lähdekoodia",
+    "Tekee poistettavista selaintiloista varmuuskopion ja palauttaa ne automaattisesti virheessä",
+    "Käynnistää backendin ja kioskin uudelleen sekä tallentaa työpöydän diagnostiikkaraportin"
   ]
 }
