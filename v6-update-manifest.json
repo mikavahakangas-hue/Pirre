@@ -1,14 +1,12 @@
 {
-  "version": "6.0.2",
-  "package_url": "https://raw.githubusercontent.com/mikavahakangas-hue/Pirre/main/releases/nspire_v6_0_2_ota_update.tar.gz",
-  "sha256": "388f9952131fc38df7dad9fd8ac09ea6c9abcef062e1434b7cee09b4e5986294",
-  "size_bytes": 44555,
+  "version": "6.0.4",
+  "package_url": "https://raw.githubusercontent.com/mikavahakangas-hue/Pirre/0c139c800404baafe8fca1eb6052eea5ba702122/releases/nspire_v6_0_4_ota_verification.tar.gz",
+  "sha256": "68afcb1c64a385cff6bbf821dd16a2b970f458e939da1270bb2c3495a01ece60",
+  "size_bytes": 3154,
   "notes": [
-    "Päivitysnäppäin lataa, tarkistaa ja asentaa tulevat V6-päivitykset suoraan laitteesta",
-    "Automaattinen palautus edelliseen toimivaan versioon asennusvirheessä",
-    "Järjestelmän tila, palvelut, lämpötila, muisti, levytila ja diagnostiikkaraportti",
-    "Näytönsäästäjän turvallinen esikatselu sekä toiminta laturissa",
-    "Käyttöliittymän ja backendin erilliset uudelleenkäynnistystoiminnot",
-    "Ei muutoksia fyysiseen näyttörotaatioon, kosketukseen, Cog/Cageen, VNC:hen tai kursoriin"
+    "Suora OTA-päivitysketju varmennetaan Päivitykset → Lataa ja asenna -toiminnolla",
+    "V6.0.3:n näytönsäästäjä ja VNC-kevennys säilyvät muuttumattomina",
+    "Päivitys tekee varmuuskopion ja palauttaa V6.0.3:n automaattisesti virheessä",
+    "Ei muutoksia näyttöön, kosketukseen, Cog/Cageen, WayVNC:hen tai verkkoon"
   ]
 }
