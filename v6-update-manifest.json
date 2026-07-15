@@ -1,12 +1,12 @@
 {
-  "version": "6.0.8",
-  "package_url": "https://raw.githubusercontent.com/mikavahakangas-hue/Pirre/f4026799f53339190e8b3c9744e9d34f1bdca139/releases/nspire_v6_0_8_desktop_stability.tar.gz",
-  "sha256": "67bf1fd467c899344b328b0fd1a1dd5be808a837551bf2f65e79442acad88c06",
-  "size_bytes": 6950,
+  "version": "6.0.9",
+  "package_url": "https://raw.githubusercontent.com/mikavahakangas-hue/Pirre/c092e10a27521e1cb0b49dae9330101e70957c6a/releases/nspire_v6_0_9_update_maintenance.tar.gz",
+  "sha256": "53939ce51a577856c34177494f1aa511e7a56496ee01a72f3744e6a5429ae403",
+  "size_bytes": 12318,
   "notes": [
-    "Tekee mustan työpöytänäkymän korjauksen pysyväksi hallitulla CSS-lohkolla",
-    "Vaihtaa CSS-välimuistiavaimen versioon 608 poistamatta Cog/WPE-käyttäjätilaa",
-    "Päivittää runtime-version V6.0.8:aan ja tarkistaa sen /api/health-vastauksesta",
-    "Tekee atomiset muutokset, täydet varmuuskopiot ja automaattisen palautuksen virheessä"
+    "Viimeistelee päivitysnäkymän yhdellä selkeällä Lataa ja päivitä -toiminnolla",
+    "Näyttää vaiheet Ladataan, Tarkistetaan, Asennetaan ja Käynnistetään sekä tarkan tapahtumalokin",
+    "Pitää näytönsäästäjän poissa päivityksen aikana ja rajaa Cage/Cog-kioskin pysäytyksen",
+    "Säilyttää V6.0.8:n työpöytäkorjauksen ja palauttaa kaikki muutokset automaattisesti virheessä"
   ]
 }
