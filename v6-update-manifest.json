@@ -1,12 +1,12 @@
 {
   "version": "6.0.9",
-  "package_url": "https://raw.githubusercontent.com/mikavahakangas-hue/Pirre/c092e10a27521e1cb0b49dae9330101e70957c6a/releases/nspire_v6_0_9_update_maintenance.tar.gz",
+  "package_url": "https://raw.githubusercontent.com/mikavahakangas-hue/Pirre/ae4f77352aed24e6f0dc8a2c4acbfc59b4ca95ce/releases/nspire_v6_0_9_update_maintenance_fixed.tar.gz",
   "sha256": "53939ce51a577856c34177494f1aa511e7a56496ee01a72f3744e6a5429ae403",
   "size_bytes": 12318,
   "notes": [
+    "Korjattu julkaisutiedoston SHA-256-ristiriita; paketin tavut vastaavat nyt manifestia",
     "Viimeistelee päivitysnäkymän yhdellä selkeällä Lataa ja päivitä -toiminnolla",
     "Näyttää vaiheet Ladataan, Tarkistetaan, Asennetaan ja Käynnistetään sekä tarkan tapahtumalokin",
-    "Pitää näytönsäästäjän poissa päivityksen aikana ja rajaa Cage/Cog-kioskin pysäytyksen",
-    "Säilyttää V6.0.8:n työpöytäkorjauksen ja palauttaa kaikki muutokset automaattisesti virheessä"
+    "Pitää näytönsäästäjän poissa päivityksen aikana ja säilyttää V6.0.8:n työpöytäkorjauksen"
   ]
 }
