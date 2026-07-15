@@ -1,12 +1,12 @@
 {
-  "version": "6.1.0",
-  "package_url": "https://raw.githubusercontent.com/mikavahakangas-hue/Pirre/cb7ed529ba047eecb703f627ba2cdea063e46d24/releases/nspire_v6_1_0_bme680_indoor_air_bootstrap.tar.gz",
-  "sha256": "d4a38ed26475f537a9b7081f18438d7a66a0bedfe309bfab051e586f8601324c",
-  "size_bytes": 2369,
+  "version": "6.1.1",
+  "package_url": "https://raw.githubusercontent.com/mikavahakangas-hue/Pirre/1a3c5475cbbc1557e448147ceb6aab74601c7a3e/releases/nspire_v6_1_1_ui_apps_bootstrap.tar.gz",
+  "sha256": "ac0c58352390c63fce1b426cf6613db1e031a1ea2ccb031d770b4707603f517f",
+  "size_bytes": 2355,
   "notes": [
-    "Lisää BME680 Sisäilma -sovelluksen ja AIR-laatan työpöydälle",
-    "Näyttää reaaliaikaisen värillisen ilmanlaatumittarin, pehmeän nuolen, 0–100 NSPIRE-arvion ja trendin",
-    "Tallentaa lämpötilan, kosteuden, ilmanpaineen ja kaasuvastuksen historian 1 tunnista 7 vuorokauteen",
-    "Tunnistaa anturin I2C-osoitteista 0x76 ja 0x77 sekä palauttaa V6.0.9:n automaattisesti asennusvirheessä"
+    "Kalibrointiarvot pysyvät näkyvissä ja tallentuvat automaattisesti; lämpötila −20…+20 °C ja korkeus −50…+200 m",
+    "Poistaa Hei Mika -tervehdyksen ja korjaa kalenteriosoitteen käyttöönoton sekä paikallisen ICS-käsittelyn",
+    "Uudistaa sääsivun, lisää Pörssisähkö-sovelluksen ja kääntää ilmanlaatumittarin vihreän hyvän arvon oikealle",
+    "Lisää lämpötilahistoriaan ruudukon, kohdistimet, akseliarvot ja arvotaulukon"
   ]
 }
