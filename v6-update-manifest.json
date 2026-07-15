@@ -1,8 +1,8 @@
 {
   "version": "6.0.2",
   "package_url": "https://raw.githubusercontent.com/mikavahakangas-hue/Pirre/main/releases/nspire_v6_0_2_ota_update.tar.gz",
-  "sha256": "13cb0eaf961ae266db410e38f2bfccf2b8f0f31e25481b0cf1832658de93f3dd",
-  "size_bytes": 49523,
+  "sha256": "388f9952131fc38df7dad9fd8ac09ea6c9abcef062e1434b7cee09b4e5986294",
+  "size_bytes": 44555,
   "notes": [
     "Päivitysnäppäin lataa, tarkistaa ja asentaa tulevat V6-päivitykset suoraan laitteesta",
     "Automaattinen palautus edelliseen toimivaan versioon asennusvirheessä",
