@@ -1,12 +1,12 @@
 {
-  "version": "6.0.7",
-  "package_url": "https://raw.githubusercontent.com/mikavahakangas-hue/Pirre/ca5cf89c434b628009a0e4945ebcddf47f4bcfd5/releases/nspire_v6_0_7_desktop_recovery.tar.gz",
-  "sha256": "26741ca5ce770596362039e075bf5f30ca4428656692df2bcba4cd47af487958",
-  "size_bytes": 4619,
+  "version": "6.0.8",
+  "package_url": "https://raw.githubusercontent.com/mikavahakangas-hue/Pirre/f4026799f53339190e8b3c9744e9d34f1bdca139/releases/nspire_v6_0_8_desktop_stability.tar.gz",
+  "sha256": "67bf1fd467c899344b328b0fd1a1dd5be808a837551bf2f65e79442acad88c06",
+  "size_bytes": 6950,
   "notes": [
-    "Korjaa mustan työpöytänäkymän nollaamalla Cog/WPE WebKitin välimuistin ja tallennetun sivustotilan",
-    "Ei korvaa käyttöliittymän HTML-, CSS- tai JavaScript-lähdekoodia",
-    "Tekee poistettavista selaintiloista varmuuskopion ja palauttaa ne automaattisesti virheessä",
-    "Käynnistää backendin ja kioskin uudelleen sekä tallentaa työpöydän diagnostiikkaraportin"
+    "Tekee mustan työpöytänäkymän korjauksen pysyväksi hallitulla CSS-lohkolla",
+    "Vaihtaa CSS-välimuistiavaimen versioon 608 poistamatta Cog/WPE-käyttäjätilaa",
+    "Päivittää runtime-version V6.0.8:aan ja tarkistaa sen /api/health-vastauksesta",
+    "Tekee atomiset muutokset, täydet varmuuskopiot ja automaattisen palautuksen virheessä"
   ]
 }
