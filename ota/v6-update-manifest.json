@@ -1,12 +1,11 @@
 {
-  "version": "6.2.0",
-  "package_url": "https://raw.githubusercontent.com/mikavahakangas-hue/Pirre/0f927672e9b3cc70d7366cd48dc826c2ac0691c9/releases/nspire_v6_2_0_compact_ui.tar.gz",
-  "sha256": "1d2894876ec9f009ee890848998dbf651167913255f27514f2c247a38a1a6941",
-  "size_bytes": 28226,
+  "version": "6.1.2",
+  "package_url": "https://raw.githubusercontent.com/mikavahakangas-hue/Pirre/60034cf9d6e407cc55086124f928c8c44ac74d16/releases/nspire_v6_1_2_sleepclock_screensaver_bootstrap.tar.gz",
+  "sha256": "cfc89771a33fb7998fc0efee3150fdcdf1f0819d1d207f96dc61c39c5c5af4af",
+  "size_bytes": 1893,
   "notes": [
-    "Uudistaa Unikellon puhtailla punaisella, keltaisella ja vihreällä näytöllä sekä valittavilla 24 h kellolla, sisälämpötilalla ja sisäkosteudella",
-    "Lisää koko näytön Unikellon, josta palataan koskettamalla mitä tahansa kohtaa",
-    "Uudistaa Sää-sovelluksen tummaksi sääasemaksi, jossa näkyvät ulkosää, BME680:n sisälämpötila ja kosteus, seuraavat 6 tuntia sekä 7 vuorokautta",
-    "Poistaa sivuttaisvierityksen sovellusnäkymistä 640×480-näytöllä ja säilyttää V6.1.2:n palautuspisteenä"
+    "V6.2.0-kanava on tilapäisesti suljettu julkaisutiedoston tarkistussummavirheen vuoksi",
+    "V6.1.2 pysyy vakaana versiona eikä epäonnistunut tarkistus muuttanut laitteen tiedostoja",
+    "Korjattu V6.2.0 julkaistaan uutena tarkistettuna bootstrap-pakettina"
   ]
 }
