@@ -3,6 +3,8 @@ name: Build and verify V7.1.3 full package
 on:
   push:
     branches: [release-v7.1.3-full-package]
+  pull_request:
+    branches: [main]
 
 permissions:
   contents: write
@@ -33,6 +35,7 @@ jobs:
           ./selftest.sh
           test "$(cat VERSION)" = "7.1.3"
       - name: Commit verified binary
+        if: github.event_name == 'push'
         shell: bash
         run: |
           set -euo pipefail
