@@ -1,14 +1,11 @@
 {
-  "version": "7.1.2",
-  "package_url": "https://raw.githubusercontent.com/mikavahakangas-hue/Pirre/afa67cb1d40a0f179d668f0f7c3c4d90e1894f64/releases/nspire_v7_1_2_updater_bootstrap.tar.gz",
-  "sha256": "35f2a5decb9d55b32902d2218d9c0a357d44f3d02e746308df24e053640b4352",
-  "size_bytes": 2427,
+  "version": "6.1.2",
+  "package_url": "https://raw.githubusercontent.com/mikavahakangas-hue/Pirre/60034cf9d6e407cc55086124f928c8c44ac74d16/releases/nspire_v6_1_2_sleepclock_screensaver_bootstrap.tar.gz",
+  "sha256": "cfc89771a33fb7998fc0efee3150fdcdf1f0819d1d207f96dc61c39c5c5af4af",
+  "size_bytes": 1893,
   "notes": [
-    "Korjaa V7.1.1:n latausvaiheen: lyhyen curl-aikakatkaisun sijasta pohjapaketti ladataan Pythonilla 300 sekunnin aikakatkaisulla ja kolmella yrityksellä",
-    "Kirjaa jatkossa latausvirheen oikean syyn päivityslokiin eikä pelkkää virhekoodia 1",
-    "Tarkistaa ladatun 83 074 tavun pohjapaketin koon, SHA-256:n ja arkistopolut ennen purkamista",
-    "Muuntaa ja tarkistaa sisäisen version V7.1.2:ksi ennen varsinaista asennusta",
-    "Korjaa sovellusreitityksen sekä palauttaa Kamera-, Valvonta-, Tapahtumat-, Sää-, Unikello- ja näytönsäästäjänäkymät",
-    "Säilyttää automaattisen palautuksen vakaaseen V6.1.2-versioon, jos health-tarkistus epäonnistuu"
+    "V7.1.2 vedettiin pois jakelusta, koska laitteen ulompi updater palautti virheen ennen bootstrap-asentimen käynnistymistä",
+    "Automaattinen palautus toimi ja vakaa V6.1.2 säilyi käytössä",
+    "Seuraava korjaus tehdään updaterin asennustilan ja journal-lokin perusteella"
   ]
 }
