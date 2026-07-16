@@ -20,12 +20,14 @@ jobs:
         shell: bash
         run: |
           set -euo pipefail
+          git fetch origin db05190b496f18b8eafe40dc24d6be25a351cd46
           git show db05190b496f18b8eafe40dc24d6be25a351cd46:releases/nspire_v7_1_0_v42_rebuild.tar.gz > /tmp/nspire-v710.tar.gz
           echo "PACKAGE_SIZE=$(stat -c %s /tmp/nspire-v710.tar.gz)"
           echo "PACKAGE_SHA256=$(sha256sum /tmp/nspire-v710.tar.gz | awk '{print $1}')"
           echo "PACKAGE_GIT_BLOB=$(git hash-object /tmp/nspire-v710.tar.gz)"
           test "$(stat -c %s /tmp/nspire-v710.tar.gz)" -gt 80000
-          tar -tzf /tmp/nspire-v710.tar.gz | head -n 30
+          tar -tzf /tmp/nspire-v710.tar.gz > /tmp/nspire-v710-files.txt
+          head -n 30 /tmp/nspire-v710-files.txt
       - name: Run package selftest
         shell: bash
         run: |
