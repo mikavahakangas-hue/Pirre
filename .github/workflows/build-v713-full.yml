@@ -1,4 +1,4 @@
-name: Build and verify V7.1.3 full package
+name: Diagnose V7.1.3 source chunks
 
 on:
   push:
@@ -7,50 +7,38 @@ on:
     branches: [main]
 
 permissions:
-  contents: write
+  contents: read
 
 jobs:
-  build:
-    if: github.actor != 'github-actions[bot]'
+  diagnose:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v4
-        with:
-          ref: release-v7.1.3-full-package
-          fetch-depth: 0
-      - name: Rebuild package from exact chunks
+      - name: Download chunks and diagnose
         shell: bash
         run: |
-          set -euo pipefail
-          cat releases/v7.1.3-source/part00.b64 releases/v7.1.3-source/part01.b64 releases/v7.1.3-source/part02.b64 releases/v7.1.3-source/part03.b64 > /tmp/v713.b64
-          base64 -d /tmp/v713.b64 > releases/nspire_v7_1_3_v42_rebuild.tar.gz
-          test "$(stat -c %s releases/nspire_v7_1_3_v42_rebuild.tar.gz)" = "105757"
-          echo "b2dbe968cc1493b8120a9fafea10931ae770033802479618e7606d907f6f3db8  releases/nspire_v7_1_3_v42_rebuild.tar.gz" | sha256sum -c -
-          tar -tzf releases/nspire_v7_1_3_v42_rebuild.tar.gz >/tmp/archive-list.txt
-          rm -rf /tmp/v713 && mkdir /tmp/v713
-          tar -xzf releases/nspire_v7_1_3_v42_rebuild.tar.gz -C /tmp/v713
-          PKG="$(find /tmp/v713 -mindepth 1 -maxdepth 1 -type d | head -n1)"
-          test -x "$PKG/selftest.sh"
-          cd "$PKG"
-          ./selftest.sh
-          test "$(cat VERSION)" = "7.1.3"
-      - name: Commit verified binary
-        if: github.event_name == 'push'
-        shell: bash
-        run: |
-          set -euo pipefail
-          git config user.name 'github-actions[bot]'
-          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
-          git add releases/nspire_v7_1_3_v42_rebuild.tar.gz
-          git commit -m 'Publish verified NSPIRE V7.1.3 package'
-          git push origin HEAD:release-v7.1.3-full-package
-          NEW_SHA="$(git rev-parse HEAD)"
-          URL="https://raw.githubusercontent.com/mikavahakangas-hue/Pirre/${NEW_SHA}/releases/nspire_v7_1_3_v42_rebuild.tar.gz"
-          for i in 1 2 3 4 5 6; do
-            curl -L --fail "$URL" -o /tmp/raw-v713.tar.gz && break
-            sleep 5
+          set +e
+          BASE='https://raw.githubusercontent.com/mikavahakangas-hue/Pirre/release-v7.1.3-full-package/releases/v7.1.3-source'
+          : > /tmp/v713.b64
+          for p in part00.b64 part01.b64 part02.b64 part03.b64; do
+            curl -L --fail --retry 3 "$BASE/$p" -o "/tmp/$p"
+            echo "$p chars=$(wc -c < /tmp/$p)" | tee -a /tmp/result.txt
+            cat "/tmp/$p" >> /tmp/v713.b64
           done
-          test "$(stat -c %s /tmp/raw-v713.tar.gz)" = "105757"
-          echo "b2dbe968cc1493b8120a9fafea10931ae770033802479618e7606d907f6f3db8  /tmp/raw-v713.tar.gz" | sha256sum -c -
-          tar -tzf /tmp/raw-v713.tar.gz >/dev/null
-          echo "VERIFIED_COMMIT=$NEW_SHA"
+          echo "base64_chars=$(wc -c < /tmp/v713.b64)" | tee -a /tmp/result.txt
+          base64 -d /tmp/v713.b64 > /tmp/v713.tar.gz 2>/tmp/decode-error.txt
+          echo "decode_rc=$?" | tee -a /tmp/result.txt
+          echo "size_bytes=$(stat -c %s /tmp/v713.tar.gz)" | tee -a /tmp/result.txt
+          echo "sha256=$(sha256sum /tmp/v713.tar.gz | awk '{print $1}')" | tee -a /tmp/result.txt
+          tar -tzf /tmp/v713.tar.gz >/tmp/archive-list.txt 2>/tmp/tar-error.txt
+          echo "tar_rc=$?" | tee -a /tmp/result.txt
+          cat /tmp/result.txt
+      - name: Upload diagnostics
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: v713-source-diagnostics
+          path: |
+            /tmp/result.txt
+            /tmp/decode-error.txt
+            /tmp/tar-error.txt
+            /tmp/archive-list.txt
