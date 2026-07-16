@@ -14,25 +14,23 @@ jobs:
     steps:
       - name: Checkout
         uses: actions/checkout@v4
-        with:
-          fetch-depth: 0
-      - name: Extract locked package from Git object
+      - name: Download exact updater payload
         shell: bash
         run: |
           set -euo pipefail
-          git fetch origin db05190b496f18b8eafe40dc24d6be25a351cd46
-          git show db05190b496f18b8eafe40dc24d6be25a351cd46:releases/nspire_v7_1_0_v42_rebuild.tar.gz > /tmp/nspire-v710.tar.gz
-          echo "PACKAGE_SIZE=$(stat -c %s /tmp/nspire-v710.tar.gz)"
-          echo "PACKAGE_SHA256=$(sha256sum /tmp/nspire-v710.tar.gz | awk '{print $1}')"
-          echo "PACKAGE_GIT_BLOB=$(git hash-object /tmp/nspire-v710.tar.gz)"
+          URL='https://raw.githubusercontent.com/mikavahakangas-hue/Pirre/db05190b496f18b8eafe40dc24d6be25a351cd46/releases/nspire_v7_1_0_v42_rebuild.tar.gz'
+          curl -L --fail --retry 3 --retry-delay 2 "$URL" -o /tmp/nspire-v710.tar.gz
+          {
+            echo "size_bytes=$(stat -c %s /tmp/nspire-v710.tar.gz)"
+            echo "sha256=$(sha256sum /tmp/nspire-v710.tar.gz | awk '{print $1}')"
+            echo "git_blob=$(git hash-object /tmp/nspire-v710.tar.gz)"
+          } | tee /tmp/verification.txt
           test "$(stat -c %s /tmp/nspire-v710.tar.gz)" -gt 80000
-          tar -tzf /tmp/nspire-v710.tar.gz > /tmp/nspire-v710-files.txt
-          head -n 30 /tmp/nspire-v710-files.txt
+          tar -tzf /tmp/nspire-v710.tar.gz > /tmp/archive-list.txt
       - name: Run package selftest
         shell: bash
         run: |
           set -euo pipefail
-          rm -rf /tmp/nspire-v710-extract
           mkdir -p /tmp/nspire-v710-extract
           tar -xzf /tmp/nspire-v710.tar.gz -C /tmp/nspire-v710-extract
           PKG="$(find /tmp/nspire-v710-extract -mindepth 1 -maxdepth 1 -type d | head -n 1)"
@@ -40,6 +38,14 @@ jobs:
           test -x "$PKG/install.sh"
           test -x "$PKG/selftest.sh"
           cd "$PKG"
-          ./selftest.sh
-          cat VERSION
-          grep -n '__version__' payload/__init__.py
+          ./selftest.sh | tee /tmp/selftest.txt
+          cat VERSION | tee /tmp/version.txt
+      - name: Upload verification result
+        uses: actions/upload-artifact@v4
+        with:
+          name: v710-verification
+          path: |
+            /tmp/verification.txt
+            /tmp/selftest.txt
+            /tmp/version.txt
+            /tmp/archive-list.txt
