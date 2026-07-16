@@ -1,12 +1,14 @@
 {
-  "version": "6.1.2",
-  "package_url": "https://raw.githubusercontent.com/mikavahakangas-hue/Pirre/60034cf9d6e407cc55086124f928c8c44ac74d16/releases/nspire_v6_1_2_sleepclock_screensaver_bootstrap.tar.gz",
-  "sha256": "cfc89771a33fb7998fc0efee3150fdcdf1f0819d1d207f96dc61c39c5c5af4af",
-  "size_bytes": 1893,
+  "version": "7.1.0",
+  "package_url": "https://raw.githubusercontent.com/mikavahakangas-hue/Pirre/f3fa28880d832097f926d21a6320985d10eb81b7/releases/nspire_v7_1_0_updater_bootstrap.tar.gz",
+  "sha256": "203a73e3ecfcc5351284a0225d31a70a44294c19d18feb48c155fc1664482812",
+  "size_bytes": 1291,
   "notes": [
-    "V7.0.0-kanava on suljettu, koska päivityksen sisältö ja uusien sovellusten toteutus jäivät selvästi tavoitetta heikommiksi",
-    "Laite ja päivitysjärjestelmä eivät rikkoutuneet",
-    "Seuraava versio rakennetaan nykyisen käyttöliittymärakenteen pohjalta ja V4.2-aikakauden toimivia ideoita hyödyntäen",
-    "V6.1.2 pysyy vakaana palautusversiona"
+    "Korjaa V7.0.0:n uusien sovellusten käynnistymisen liittämällä ne oikeaan sovellusrekisteriin ja dynaamiseen navigointiin",
+    "Palauttaa kameran LIVE-, VALVONTA- ja TAPAHTUMAT-näkymät V4.2-aikakauden toimivien ideoiden pohjalta ilman vanhan koodin kopiointia",
+    "Uudistaa Sään, Unikellon, näytönsäästäjän, Päivän, Koulun, Koti ja vapaa -näkymän sekä Piirron",
+    "Sovittaa näkymät 640×480-näytölle ilman sivuttaisvieritystä",
+    "Lataa lukituista commiteista tavuntarkasti varmennetun paketin, tekee varmuuskopion ja palauttaa aiemman version automaattisesti health-virheessä",
+    "Fyysisen kamerakuvan toiminta varmistuu ensimmäisessä laitetestissä; kameran API-, palvelu- ja liiketunnistuspolut on testattu"
   ]
 }
