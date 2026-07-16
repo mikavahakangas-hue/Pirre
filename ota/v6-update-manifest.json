@@ -1,14 +1,14 @@
 {
   "version": "7.1.0",
-  "package_url": "https://raw.githubusercontent.com/mikavahakangas-hue/Pirre/f3fa28880d832097f926d21a6320985d10eb81b7/releases/nspire_v7_1_0_updater_bootstrap.tar.gz",
-  "sha256": "203a73e3ecfcc5351284a0225d31a70a44294c19d18feb48c155fc1664482812",
-  "size_bytes": 1291,
+  "package_url": "https://raw.githubusercontent.com/mikavahakangas-hue/Pirre/db05190b496f18b8eafe40dc24d6be25a351cd46/releases/nspire_v7_1_0_v42_rebuild.tar.gz",
+  "sha256": "68ca0732f09ee35766379bc4399489bef154f5108496a39adde19e9f267e6b7b",
+  "size_bytes": 83074,
   "notes": [
     "Korjaa V7.0.0:n uusien sovellusten käynnistymisen liittämällä ne oikeaan sovellusrekisteriin ja dynaamiseen navigointiin",
     "Palauttaa kameran LIVE-, VALVONTA- ja TAPAHTUMAT-näkymät V4.2-aikakauden toimivien ideoiden pohjalta ilman vanhan koodin kopiointia",
     "Uudistaa Sään, Unikellon, näytönsäästäjän, Päivän, Koulun, Koti ja vapaa -näkymän sekä Piirron",
     "Sovittaa näkymät 640×480-näytölle ilman sivuttaisvieritystä",
-    "Lataa lukituista commiteista tavuntarkasti varmennetun paketin, tekee varmuuskopion ja palauttaa aiemman version automaattisesti health-virheessä",
+    "Lataa yhden lukitun ja tarkistetun asennuspaketin suoraan updaterilla, tekee varmuuskopion ja palauttaa aiemman version automaattisesti health-virheessä",
     "Fyysisen kamerakuvan toiminta varmistuu ensimmäisessä laitetestissä; kameran API-, palvelu- ja liiketunnistuspolut on testattu"
   ]
 }
