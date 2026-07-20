@@ -1,0 +1,42 @@
+name: Validate NSPIRE V9.8 installer
+
+on:
+  push:
+    branches:
+      - build/nspire-v9.8.0-all-in-one
+  workflow_dispatch:
+
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Bash syntax
+        run: bash -n releases/nspire_v9_8_0_all_in_one_installer.sh
+      - name: Extract and compile embedded Python
+        shell: bash
+        run: |
+          awk '
+            /cat > "\$INSTALL_ROOT\/nspire98.py" <<'\''PY'\''/ {capture=1; next}
+            capture && /^PY$/ {exit}
+            capture {print}
+          ' releases/nspire_v9_8_0_all_in_one_installer.sh > /tmp/nspire98.py
+          test -s /tmp/nspire98.py
+          python3 -m py_compile /tmp/nspire98.py
+      - name: Extract and validate embedded JavaScript
+        shell: bash
+        run: |
+          awk '
+            /cat > "\$ASSET_ROOT\/nspire98.js" <<'\''JS'\''/ {capture=1; next}
+            capture && /^JS$/ {exit}
+            capture {print}
+          ' releases/nspire_v9_8_0_all_in_one_installer.sh > /tmp/nspire98.js
+          test -s /tmp/nspire98.js
+          node --check /tmp/nspire98.js
+      - name: Contract checks
+        run: |
+          grep -q '6,minmax' releases/nspire_v9_8_0_all_in_one_installer.sh
+          grep -q 'Sohva 2' releases/nspire_v9_8_0_all_in_one_installer.sh
+          grep -q 'nspire-v98-watchdog.timer' releases/nspire_v9_8_0_all_in_one_installer.sh
+          grep -q 'nspire-v98-restore' releases/nspire_v9_8_0_all_in_one_installer.sh
+          grep -q 'bme_always_on' releases/nspire_v9_8_0_all_in_one_installer.sh
