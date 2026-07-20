@@ -1,0 +1,42 @@
+name: Validate NSPIRE V9.9 complete suite
+
+on:
+  pull_request:
+    branches: [main]
+    types: [opened, synchronize, reopened, ready_for_review]
+  workflow_dispatch:
+
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Bash syntax
+        run: bash -n releases/nspire_v9_9_0_complete_suite_all_in_one.sh
+      - name: Extract and validate embedded JavaScript
+        shell: bash
+        run: |
+          awk '
+            /cat > "\$ASSET_ROOT\/nspire99-extra.js" <<'\''JS'\''/ {capture=1; next}
+            capture && /^JS$/ {exit}
+            capture {print}
+          ' releases/nspire_v9_9_0_complete_suite_all_in_one.sh > /tmp/nspire99-extra.js
+          test -s /tmp/nspire99-extra.js
+          node --check /tmp/nspire99-extra.js
+      - name: Extract and compile first embedded Python patch
+        shell: bash
+        run: |
+          awk '
+            /python3 - "\$INSTALL_ROOT\/nspire98.py" "\$CONFIG" <<'\''PY'\''/ {capture=1; next}
+            capture && /^PY$/ {exit}
+            capture {print}
+          ' releases/nspire_v9_9_0_complete_suite_all_in_one.sh > /tmp/v99-patch.py
+          test -s /tmp/v99-patch.py
+          python3 -m py_compile /tmp/v99-patch.py
+      - name: Contract checks
+        run: |
+          grep -q 'save_profile' releases/nspire_v9_9_0_complete_suite_all_in_one.sh
+          grep -q 'n99-favorites' releases/nspire_v9_9_0_complete_suite_all_in_one.sh
+          grep -q 'Insinöörityökalut' releases/nspire_v9_9_0_complete_suite_all_in_one.sh
+          grep -q 'bme_always_on' releases/nspire_v9_9_0_complete_suite_all_in_one.sh
+          grep -q 'L10' releases/nspire_v9_9_0_complete_suite_all_in_one.sh
