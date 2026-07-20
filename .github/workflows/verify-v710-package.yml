@@ -1,0 +1,62 @@
+name: Verify V7.1.0 package
+
+on:
+  pull_request:
+    branches: [main]
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  verify:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+      - name: Download exact updater payload
+        shell: bash
+        run: |
+          set -u
+          URL='https://raw.githubusercontent.com/mikavahakangas-hue/Pirre/db05190b496f18b8eafe40dc24d6be25a351cd46/releases/nspire_v7_1_0_v42_rebuild.tar.gz'
+          curl -L --fail --retry 3 --retry-delay 2 "$URL" -o /tmp/nspire-v710.tar.gz
+          CURL_RC=$?
+          {
+            echo "curl_rc=$CURL_RC"
+            if [ -f /tmp/nspire-v710.tar.gz ]; then
+              echo "size_bytes=$(stat -c %s /tmp/nspire-v710.tar.gz)"
+              echo "sha256=$(sha256sum /tmp/nspire-v710.tar.gz | awk '{print $1}')"
+              echo "git_blob=$(git hash-object /tmp/nspire-v710.tar.gz)"
+              tar -tzf /tmp/nspire-v710.tar.gz > /tmp/archive-list.txt 2>/tmp/tar-error.txt
+              echo "tar_rc=$?"
+            fi
+          } | tee /tmp/verification.txt
+          exit 0
+      - name: Run package selftest
+        shell: bash
+        run: |
+          set +e
+          mkdir -p /tmp/nspire-v710-extract
+          tar -xzf /tmp/nspire-v710.tar.gz -C /tmp/nspire-v710-extract 2>>/tmp/tar-error.txt
+          PKG="$(find /tmp/nspire-v710-extract -mindepth 1 -maxdepth 1 -type d | head -n 1)"
+          if [ -n "$PKG" ] && [ -x "$PKG/selftest.sh" ]; then
+            cd "$PKG"
+            ./selftest.sh > /tmp/selftest.txt 2>&1
+            echo "selftest_rc=$?" >> /tmp/verification.txt
+            cat VERSION > /tmp/version.txt 2>/dev/null || true
+          else
+            echo "selftest_rc=not_started" >> /tmp/verification.txt
+          fi
+          exit 0
+      - name: Upload verification result
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: v710-verification
+          if-no-files-found: warn
+          path: |
+            /tmp/verification.txt
+            /tmp/selftest.txt
+            /tmp/version.txt
+            /tmp/archive-list.txt
+            /tmp/tar-error.txt
