@@ -1,9 +1,6 @@
 name: Validate NSPIRE V9.8 installer
 
 on:
-  push:
-    branches:
-      - build/nspire-v9.8.0-all-in-one
   pull_request:
     branches:
       - main
