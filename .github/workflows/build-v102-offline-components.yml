@@ -7,7 +7,6 @@ on:
       - '.github/v102-build-trigger.txt'
       - 'releases/nspire_v10_0_0_daily_driver_platform_all_in_one.sh'
       - 'releases/nspire_v10_1_0_companion_blackbox_all_in_one.sh'
-      - 'releases/nspire_v10_2_0_permanent_remote_clear_ui_all_in_one.sh'
 
 permissions:
   contents: read
@@ -26,8 +25,6 @@ jobs:
              out/nspire_v10_2_0_offline_components/10_install_v10_0.sh
           cp releases/nspire_v10_1_0_companion_blackbox_all_in_one.sh \
              out/nspire_v10_2_0_offline_components/20_install_v10_1_original.sh
-          cp releases/nspire_v10_2_0_permanent_remote_clear_ui_all_in_one.sh \
-             out/nspire_v10_2_0_offline_components/30_install_v10_2.sh
           chmod +x out/nspire_v10_2_0_offline_components/*.sh
           sha256sum out/nspire_v10_2_0_offline_components/*.sh > out/nspire_v10_2_0_offline_components/SHA256SUMS
           tar -C out -czf nspire_v10_2_0_offline_components.tar.gz nspire_v10_2_0_offline_components
