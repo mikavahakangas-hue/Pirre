@@ -52,7 +52,12 @@ chmod +x "$TMP"
 bash -n "$TMP"
 
 set +e
-sudo bash "$TMP"
+if [[ ${EUID:-$(id -u)} -eq 0 ]]; then
+  bash "$TMP"
+else
+  command -v sudo >/dev/null 2>&1 || { echo "VIRHE: sudo puuttuu" >&2; exit 1; }
+  sudo bash "$TMP"
+fi
 rc=$?
 set -e
 
