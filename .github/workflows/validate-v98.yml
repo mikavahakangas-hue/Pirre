@@ -4,6 +4,9 @@ on:
   push:
     branches:
       - build/nspire-v9.8.0-all-in-one
+  pull_request:
+    branches:
+      - main
   workflow_dispatch:
 
 jobs:
