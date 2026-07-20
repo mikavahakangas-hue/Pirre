@@ -25,33 +25,10 @@ jobs:
           cp releases/nspire_v10_0_0_daily_driver_platform_all_in_one.sh \
              out/nspire_v10_2_0_offline_components/10_install_v10_0.sh
           cp releases/nspire_v10_1_0_companion_blackbox_all_in_one.sh \
-             out/nspire_v10_2_0_offline_components/20_install_v10_1.sh
+             out/nspire_v10_2_0_offline_components/20_install_v10_1_original.sh
           cp releases/nspire_v10_2_0_permanent_remote_clear_ui_all_in_one.sh \
              out/nspire_v10_2_0_offline_components/30_install_v10_2.sh
-          python3 - <<'PY'
-          from pathlib import Path
-          p=Path('out/nspire_v10_2_0_offline_components/20_install_v10_1.sh')
-          s=p.read_text(encoding='utf-8')
-          replacements=[
-            ('ROOT = Path("/opt/nspire-v101")','ROOT = Path(os.environ.get("NSPIRE_V101_ROOT", "/opt/nspire-v101"))'),
-            ('python3 "$V101_STAGE/companion.py" selftest','NSPIRE_V101_ROOT="$V101_STAGE" python3 "$V101_STAGE/companion.py" selftest'),
-            ('''            device["last_seen"] = int(time.time()); changed = True
-            if changed: save_paired(devices)
-            return True''','''            now = int(time.time())
-            if now - int(device.get("last_seen", 0)) >= 300:
-                device["last_seen"] = now
-                save_paired(devices)
-            return True''')]
-          for old,new in replacements:
-              if s.count(old)!=1:
-                  raise SystemExit(f'Expected one V10.1 patch target, got {s.count(old)}')
-              s=s.replace(old,new,1)
-          p.write_text(s,encoding='utf-8')
-          PY
           chmod +x out/nspire_v10_2_0_offline_components/*.sh
-          bash -n out/nspire_v10_2_0_offline_components/10_install_v10_0.sh
-          bash -n out/nspire_v10_2_0_offline_components/20_install_v10_1.sh
-          bash -n out/nspire_v10_2_0_offline_components/30_install_v10_2.sh
           sha256sum out/nspire_v10_2_0_offline_components/*.sh > out/nspire_v10_2_0_offline_components/SHA256SUMS
           tar -C out -czf nspire_v10_2_0_offline_components.tar.gz nspire_v10_2_0_offline_components
       - uses: actions/upload-artifact@v4
